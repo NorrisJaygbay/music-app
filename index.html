@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3e247721a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="player">
+        <h1>Music Player</h1>
+        <div class="musicimage">
+        </div>
+        <audio id="audio" src="./music/music11.mp3"></audio>
+        <div class="timecont">
+            <p class="cutime">00:00</p>
+            <div class="progress1">
+                <div class="progress2"></div>
+            </div>
+            <p class="dutime">00:00</p>
+        </div>
+        
+        <div class="controls">
+            <div>
+                <button class="btn6 btnplaylist"><i class="fa-solid fa-list"></i></button>
+            </div>
+            <div>
+                <!-- <button id="prev" class="btn3">&#9664;&#9664;</button> -->
+                <button id="prev" class="btn3"> <i class="fa-solid fa-backward"></i></button>
+               
+              
+            </div>
+            <!-- <button id="play">Play</button> -->
+            <div class="btncont">
+                <button id="play" class="btn1"><i class="fa-solid fa-play"></i></button>
+                <button id="pause" class="btn2"><i class="fa-solid fa-pause"></i></button>
+            </div>
+            <div>
+                <!-- <button id="next" class="btn4">&#9654;&#9654;</button> -->
+                <button id="next" class="btn4">  <i class="fa-solid fa-forward"></i></button>
+            </div>
+            <div>
+                <button id="repeat" class="btn5"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+        </div>
+        
+        <div class="plist">
+            <div class="closeplist">
+                <button class="close"><i class="fa-solid fa-xmark fa-2x"></i></button>
+            </div>
+            <ul id="playlist">
+                <li data-src="./assets/music/music1.mp3"><i class="fa-solid fa-music mus"></i> Am at live today</li>
+                <li data-src="./assets/music/music5.mp3"><i class="fa-solid fa-music mus"></i> I have no other God</li>
+                <li data-src="./assets/music/music6.mp3"><i class="fa-solid fa-music mus"></i> Love letter</li>
+                <li data-src="./assets/music/music8.mp3"><i class="fa-solid fa-music mus"></i> For my good</li>
+                <li data-src="./assets/music/music7.mp3"><i class="fa-solid fa-music mus"></i> Strong tower</li>
+                <li data-src="./assets/music/music10.mp3"><i class="fa-solid fa-music mus"></i> I was made for success</li>
+                <li data-src="./assets/music/music11.mp3"><i class="fa-solid fa-music mus"></i> Stand up for Jesus</li>
+
+            </ul>
+        </div>
+           
+    </div>
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background: #071c21;
+}
+h1{
+    color: #071c21;
+    font-size: 1.4rem;
+}
+.player {
+    background: #fff;
+    width: 22%;
+    height: 350px;
+    overflow: hidden;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fff;
+    text-align: center;
+    position: relative;
+}
+
+.musicimage{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 3px solid #071c21;
+    background-image: url('./assets/images/img2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation: rot 20s linear infinite;
+    animation-play-state: paused;
+}
+.music2p{
+    animation-play-state: running;
+}
+@keyframes rot{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.controls{
+    display: flex;
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.controls button {
+    background: #007bff;
+    /* background: transparent; */
+    border: none;
+    color: white;
+    /* color: #0056b3; */
+    /* padding: 10px 20px; */
+    /* margin: 5px; */
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls button:hover {
+    background: #0056b3;
+}
+
+.btncont{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 10px; */
+    /* border: 1px solid; */
+}
+.btn1{
+    position: absolute;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     padding: 10px 20px;
+  
+}
+
+.btn2{
+    /* position: absolute; */
+    /* z-index: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+.btn12{
+    z-index: 1;
+}
+.btn3, .btn4, .btn5, .btn6{
+    padding: 5px 15px;
+}
+
+
+.progress1{
+    width: 90%;
+    height: 8px;
+    background: #e3e4e0;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.progress2{
+    width: 0%;
+    height: 15px;
+    background:#071c21;
+}
+
+.timecont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.plist{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    /* top: 0; */
+    left: 0;
+    background: #007bffef;
+    z-index: 10;
+    transition: .3s;
+}
+.plist2{
+    top: 0;
+}
+#playlist{
+    list-style: none;
+    color: #fff;
+    font-size: 1rem;
+    /* border: 1px  solid; */
+    margin: 30px auto;
+    /* font-weight: bold; */
+}
+#playlist li{
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+#playlist li:hover{
+   background: #071c21;
+}
+.mus{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.closeplist{
+    text-align: end;
+    padding: 20px;
+    /* border: 1px solid; */
+    /* width: fit-content; */
+}
+.closeplist button{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #071c21;
+    cursor: pointer;
+}
+
+
+@media all and (max-width:1050px){
+    .player {
+        width: 25%;
+    }
+}
+@media all and (max-width:930px){
+    .player {
+        width: 30%;
+    }
+}
+@media all and (max-width:760px){
+    .player {
+        width: 35%;
+    }
+}
+@media all and (max-width:680px){
+    .player {
+        width: 40%;
+    }
+}
+@media all and (max-width:580px){
+    .player {
+        width: 45%;
+    }
+}
+@media all and (max-width:510px){
+    .player {
+        width: 50%;
+    }
+}
+@media all and (max-width:460px){
+    .player {
+        width: 60%;
+    }
+}
+@media all and (max-width:350px){
+    .player {
+        width: 65%;
+    }
+}
+@media all and (max-width:380px){
+    .player {
+        width: 70%;
+    }
+}
+@media all and (max-width:325px){
+    .player {
+        width: 80%;
+    }
+}
+@media all and (max-width:290px){
+    .player {
+        width: 85%;
+    }
+    .controls{
+        gap: 5px;
+    }
+}
