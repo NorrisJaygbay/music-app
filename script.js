@@ -111,10 +111,30 @@ playlist.addEventListener("click", function(event) {
 });
 
 
-
+// Update progress bar
+let progress1 = document.querySelector('.progress1');
 let progress2 = document.querySelector('.progress2');
-    audio.addEventListener("timeupdate", function() {
-        const progressPercent = (audio.currentTime / audio.duration) * 100;
-        progress2.style.width = progressPercent + "%";
-    });
+progress1.addEventListener("click", function(event) {
+    const progressRect = progress1.getBoundingClientRect();
+    const clickX = event.clientX - progressRect.left;
+    const percentClicked = clickX / progressRect.width;
+    const seekTime = percentClicked * audio.duration;
+    audio.currentTime = seekTime;
+});
+
+audio.addEventListener("timeupdate", function() {
+    const progressPercent = (audio.currentTime / audio.duration) * 100;
+    progress2.style.width = progressPercent + "%";
+});
+
+// Initialize progress bar
+audio.addEventListener("loadedmetadata", function() {
+    progress2.style.width = "0%";
+});
+
+// Adjust progress bar on seeking
+audio.addEventListener("seeking", function() {
+    const progressPercent = (audio.currentTime / audio.duration) * 100;
+    progress2.style.width = progressPercent + "%";
+});
 
